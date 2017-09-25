@@ -1,9 +1,10 @@
-pre_build:
-  commands:
-    - export LC_ALL="en_US.UTF-8"
-    - locale-gen en_US en_US.UTF-8
-    - dpkg-reconfigure locales
-build:
-  commands:
-    - ./sbt installerZip
+phases:
+  pre_build:
+    commands:
+      - export LC_ALL="en_US.UTF-8"
+      - locale-gen en_US en_US.UTF-8
+      - dpkg-reconfigure locales
+  build:
+    commands:
+      - ./sbt installerZip
 
